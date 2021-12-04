@@ -1,3 +1,158 @@
-.todo-list {
+.wedding {
   margin-left: 100px;
 }
+body{
+  position: absolute;
+width: 1920;
+height: 1048;
+left: 0px;
+top: 0px;
+background: url(nen.png) no-repeat center fixed;
+background-size: cover;
+
+
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+background-repeat: no-repeat;
+}
+.menu ul{position: absolute;
+  width: 1920px;
+  height: 105px;
+  left: 0px;
+  top: 0px;
+  }
+   #book{position: absolute;
+    width: 152px;
+    height: 96px;
+    left: 567px;
+    top: 3px;
+    
+    font-family: Almendra;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 47px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    mix-blend-mode: hard-light;}
+#home{position: absolute;
+  width: 120px;
+  height: 98px;
+  left: 211px;
+  top: 3px;
+  
+  font-family: Almendra;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 47px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  
+  color:#FFFFFF;
+  
+  mix-blend-mode: hard-light;}
+  #news{position: absolute;
+    width: 120px;
+    height: 98px;
+    left: 391px;
+    top: 3px;
+    
+    font-family: Almendra;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 47px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    mix-blend-mode: hard-light;
+  }
+  #hall{position: absolute;
+    width: 120px;
+    height: 101px;
+    left: 779px;
+    top: 0px;
+    
+    font-family: Almendra;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 47px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #FFFFFF;
+    
+    mix-blend-mode: hard-light;}
+    #contact{position: absolute;
+      width: 144px;
+      height: 101px;
+      left: 959px;
+      top: 0px;
+      
+      font-family: Almendra;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 47px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      
+      color: #FFFFFF;
+      
+      mix-blend-mode: hard-light;}
+      #mot{position: absolute;
+        width: 877px;
+        height: 154px;
+        left: 567px;
+        top: 437px;
+        
+        font-family: Petit Formal Script;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 100px;
+        line-height: 125px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        
+        color: #FFFFFF;
+        
+        opacity: 0.8;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+        #hai{position: absolute;
+          width: 636px;
+          height: 234px;
+          left: 688px;
+          top: 514px;
+          
+          font-family: Meie Script;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 70px;
+          line-height: 89px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          
+          color: #FFFFFF;
+          
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+#look{position: absolute;
+  width: 43px;
+  height: 38px;
+  left: 1849px;
+  top: calc(50% - 38px/2 - 8.5px);
+  background: url(look.png);
+  mix-blend-mode: soft-light;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));}

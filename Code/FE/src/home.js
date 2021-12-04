@@ -90,7 +90,8 @@ const App = (props) => {
       })
       .catch(error => console.log('error', error));
   }
- 
+  class App extends React.Component {  
+    render() { 
   return (
     <div className="wedding">
       <h1> Wedding </h1>
@@ -108,9 +109,7 @@ const App = (props) => {
 <h2 id="look">
   </h2>
   </ul>  
- 
-  <h2 id="mot">Your sweet day</h2>   
-  <h2 id="hai">your best wedding app</h2>       
+      
 </div>
       <button onClick={() => addItem()}>add</button>
       {
@@ -125,7 +124,8 @@ const App = (props) => {
     </div>
   )
 
-    }
-
-export default App;
+ 
+}}}
   
+
+export default App; 

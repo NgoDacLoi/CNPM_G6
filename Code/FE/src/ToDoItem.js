@@ -11,7 +11,7 @@ const TodoItem = (props) => {
                 id="myCheck"
                 onClick={() => { props.onUpdate() }}
             />
-            <button onClick={() => { props.onDelete() }}>Delete</button>
+            <button onClick={() => { props.onDelete() }}>delete</button>
         </div>
     )
 }
