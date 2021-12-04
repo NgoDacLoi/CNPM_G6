@@ -90,7 +90,6 @@ const App = (props) => {
       })
       .catch(error => console.log('error', error));
   }
- 
   return (
     <div className="wedding">
       <h1> Wedding </h1>
@@ -126,6 +125,7 @@ const App = (props) => {
   )
 
     }
+  
 
 export default App;
   

@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { Route,Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import App from './App';
 import Home from './home';
 
-const routing = (  
+const rous = (  
   <Router>  
   <div>  
   <Route exact path="/" component={App} />  
@@ -13,5 +13,5 @@ const routing = (
   </div>  
   </Router>  
   )  
-  ReactDOM.render(routing, document.getElementById('root'));
+  ReactDOM.render(rous, document.getElementById('root'));
 
