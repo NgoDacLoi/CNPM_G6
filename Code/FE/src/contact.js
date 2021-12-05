@@ -4,14 +4,9 @@ import "./App.css"
 const App = (props) => {
   const [Names, SetNames] = useState("")
   const [currentname, Setcurrentname] = useState("")
-  const [currentdate, Setcurrentdate] = useState("")
-  const [currentshift, Setcurrentshift] = useState("")
-  const [currentnotable, Setcurrentnotable] = useState("")
-  const [currentmenu, Setcurrentmenu] = useState("")
-  const [currentservices, Setcurrentservices] = useState("")
   const [currentphone, Setcurrentphone] = useState("")
   const [currentmail, Setcurrentmail] = useState("")
-  const [currenthall, Setcurrenthall] = useState("")
+  const [currentcontent, Setcurrentcontent] = useState("")
   useEffect(() => {
     readData()
   }, [])
@@ -22,7 +17,7 @@ const App = (props) => {
       redirect: 'follow'
     };
 
-    fetch("http://127.0.0.1:5000/data", requestOptions)
+    fetch("http://127.0.0.1:5000/contact", requestOptions)
       .then(response => response.text())
       .then(result => {
         SetNames(JSON.parse(result).Names)
@@ -62,25 +57,15 @@ const App = (props) => {
     myHeaders.append("Content-Type", "application/json");
 
     
-    var raw1 = JSON.stringify({ "Date": currentdate,"Shift": currentshift,"Hall": currenthall,"NoTable": currentnotable,
-    "Menu": currentmenu, "Service": currentservices,"Name": currentname,"Phone": currentphone,"Mail": currentmail  });
-    Setcurrentdate('')
+    var raw1 = JSON.stringify({"Name": currentname,"Phone": currentphone,"Mail": currentmail,"Content":currentcontent  });
     
-    Setcurrentshift('')
-    
-    Setcurrenthall('')
-    
-    Setcurrentnotable('')
- 
-    Setcurrentmenu('')
-
-    Setcurrentservices('')
    
     Setcurrentname('')
     
     Setcurrentphone('')
  
     Setcurrentmail('')
+    Setcurrentcontent('')
    
     
     var requestOptions = {
@@ -90,7 +75,7 @@ const App = (props) => {
       redirect: 'follow'
     };
 
-    fetch("http://127.0.0.1:5000/data", requestOptions)
+    fetch("http://127.0.0.1:5000/contact", requestOptions)
       .then(response => response.text())
       .then(result => {
         console.log(result)
@@ -101,38 +86,7 @@ const App = (props) => {
 
   return (
     <div className="todo-list">
-      <h1> list </h1>
-
-      <h4> Date </h4>
-      <input value={currentdate} onChange={(event) => {
-        Setcurrentdate(event.target.value);
-      }}
-      />
-      <h4> Shift </h4>
-      <input value={currentshift} onChange={(event) => {
-        Setcurrentshift(event.target.value);
-      }}
-      />
-      <h4> Hall </h4>
-      <input value={currenthall} onChange={(event) => {
-        Setcurrenthall(event.target.value);
-      }}
-      />
-      <h4> Number of table </h4>
-      <input value={currentnotable} onChange={(event) => {
-        Setcurrentnotable(event.target.value);
-      }}
-      />
-      <h4> Menu </h4>
-      <input value={currentmenu} onChange={(event) => {
-        Setcurrentmenu(event.target.value);
-      }}
-      />
-      <h4> Services </h4>
-      <input value={currentservices} onChange={(event) => {
-        Setcurrentservices(event.target.value);
-      }}
-      />
+      <h1> Contact </h1>
       <h4> Name </h4>
       <input value={currentname} onChange={(event) => {
         Setcurrentname(event.target.value);
@@ -148,10 +102,12 @@ const App = (props) => {
         Setcurrentmail(event.target.value);
       }}
       />
-
+      <h4> Content </h4>
+      <input value={currentcontent} onChange={(event) => {
+        Setcurrentcontent(event.target.value);
+      }}
+      />
       <button onClick={() => addData()}>Add</button>
-     
-     
     </div>
   )
 

@@ -1,3 +1,4 @@
+from typing import Container
 import flask
 from flask import request, jsonify, Response
 import json
@@ -15,64 +16,62 @@ run_with_ngrok(app)
 
 
 
-@app.route('/item', methods=['POST'])
+@app.route('/data', methods=['POST'])
 def add_item():
     # Get item from the POST body
     req_data = request.get_json()
-    item = req_data['item']
+    Date = req_data['Date']
+    Shift = req_data['Shift']
+    Hall = req_data['Hall']
+    NoTable = req_data['NoTable']
+    Menu = req_data['Menu']
+    Service = req_data['Service']
+    Name = req_data['Name']
+    Phone = req_data['Phone']
+    Mail = req_data['Mail']
 
     # Add item to the list
-    res_data = service.add_to_list(item)
+    res_data = service.add_to_list(Date,Shift,Hall,NoTable,Menu,Service,Name,Phone,Mail)
 
-    # Return error if item not added
-    if res_data is None:
-        response = Response("{'error': 'Item not added - " + item + "'}", status=400 , mimetype='application/json')
-        return response
+   
 
     # Return response
     response = Response(json.dumps(res_data), mimetype='application/json')
     return response
-@app.route('/item/', methods=['GET'])
+@app.route('/data', methods=['GET'])
 def get_all_items():
     # Get items from the helper
     res_data = service.get_all_items()
     # Return response
     response = Response(json.dumps(res_data), mimetype='application/json')
     return response
-
-@app.route('/item', methods=['PUT'])
-def update_status():
+#thêm vào controller.py
+@app.route('/contact', methods=['POST'])
+def add_contact():
     # Get item from the POST body
     req_data = request.get_json()
-    item = req_data['item']
-    status = req_data['status']
+    
+    Name = req_data['Name']
+    Phone = req_data['Phone']
+    Mail = req_data['Mail']
+    Content=req_data['Content']
 
-    # Update item in the list
-    res_data = service.update_status(item, status)
+    # Add item to the list
+    res_data = service.add_to_contact(Name,Phone,Mail,Content)
 
-    # Return error if the status could not be updated
-    if res_data is None:
-        response = Response("{'error': 'Error updating item - '" + item + ", " + status   +  "}", status=400 , mimetype='application/json')
-        return response
+   
 
     # Return response
     response = Response(json.dumps(res_data), mimetype='application/json')
-
     return response
-@app.route('/item', methods=['DELETE'])
-def delete_item():
-    # Get item from the POST body
-    req_data = request.get_json()
-    item = req_data['item']
-    # Delete item from the list
-    res_data = service.delete_item(item)
-    # Return error if the item could not be deleted
-    if res_data is None:
-        response = Response("{'error': 'Error deleting item - '" + item +  "}", status=400 , mimetype='application/json')
-        return response
+@app.route('/contact', methods=['GET'])
+def get_all_contact():
+    # Get items from the helper
+    res_data = service.get_all_contact()
     # Return response
     response = Response(json.dumps(res_data), mimetype='application/json')
-
     return response
+
+
 if __name__ == '__main__':
     app.run()
