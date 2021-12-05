@@ -14,9 +14,9 @@ UI / UX prototype: [here](https://www.figma.com/file/9udHeHqSKIbplF9qCKv3v8/Unti
 
 Tech stacks:
 
-- Front-end: [...]
-- Back-end: [...]
-- Database: [...]
+- Front-end: ReactJS
+- Back-end: Python
+- Database: SQLite
 - ...
 
 Demo online: [link to website - update later]
